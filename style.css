@@ -55,6 +55,33 @@ nav a.active {
     color: #ffffff;
 }
 
+/* Intro */
+
+.hero {
+    margin-bottom: 4rem;
+}
+
+.intro {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #2a2a2a;
+}
+
+.accent-line {
+    width: 40px;
+    height: 2px;
+    background-color: var(--falcons-red);
+    margin: 0.8rem 0 1.2rem;
+}
+
 /* Typography */
 
 h1, h2, h3 {
@@ -62,15 +89,9 @@ h1, h2, h3 {
     font-weight: normal;
 }
 
-.subtitle {
-    color: var(--falcons-silver);
-    margin-top: 0.5rem;
-}
-
 .lead {
     font-size: 1.05rem;
     max-width: 650px;
-    margin-top: 1.5rem;
 }
 
 .muted {
@@ -79,10 +100,6 @@ h1, h2, h3 {
 }
 
 /* Layout */
-
-.hero {
-    margin-bottom: 4rem;
-}
 
 .content {
     margin-bottom: 4rem;
@@ -105,15 +122,6 @@ li::marker {
     margin-bottom: 0.6rem;
 }
 
-/* Footer */
-
-footer {
-    text-align: center;
-    font-size: 0.8rem;
-    color: var(--falcons-silver);
-    margin-top: 6rem;
-    opacity: 0.7;
-}
 /* Portfolio Cards */
 
 .cards {
@@ -133,22 +141,19 @@ footer {
     transition: transform 0.15s ease, border-color 0.15s ease;
 }
 
+.card:hover {
+    transform: translateY(-3px);
+    border-color: var(--falcons-red);
+}
+
 .card h3 {
     margin-top: 0;
     margin-bottom: 0.6rem;
-    color: #ffffff;
-    font-size: 1rem;
 }
 
 .card p {
     font-size: 0.9rem;
-    line-height: 1.5;
     color: var(--falcons-silver);
-}
-
-.card:hover {
-    transform: translateY(-3px);
-    border-color: var(--falcons-red);
 }
 
 .tag {
@@ -157,4 +162,28 @@ footer {
     font-size: 0.7rem;
     letter-spacing: 1px;
     color: var(--falcons-red);
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--falcons-silver);
+    margin-top: 6rem;
+    opacity: 0.7;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+    .intro {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
 }
