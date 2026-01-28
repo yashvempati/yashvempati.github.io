@@ -1,41 +1,45 @@
-/* Minimalist Dark Theme — Falcons-inspired */
-
 :root {
     --falcons-red: #a71930;
-    --falcons-black: #000000;
     --falcons-silver: #a5acaf;
     --bg-dark: #1a1e21;
     --text-main: #d1d1d1;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: var(--bg-dark);
     color: var(--text-main);
-    font-family: "Georgia", serif; /* Classic, non-tech look */
-    line-height: 1.6;
-    max-width: 800px;
+    font-family: Georgia, serif;
+    max-width: 900px;
     margin: 0 auto;
     padding: 2rem;
+    line-height: 1.65;
 }
+
+/* Navigation */
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid #2a2a2a;
     padding-bottom: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 .logo {
     color: var(--falcons-red);
-    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 1.5rem;
     padding: 0;
 }
 
@@ -46,39 +50,67 @@ nav a {
     letter-spacing: 1px;
 }
 
-nav a:hover {
+nav a:hover,
+nav a.active {
     color: #ffffff;
 }
 
-h2, h3 {
+/* Typography */
+
+h1, h2, h3 {
     color: #ffffff;
     font-weight: normal;
+}
+
+.subtitle {
+    color: var(--falcons-silver);
+    margin-top: 0.5rem;
+}
+
+.lead {
+    font-size: 1.05rem;
+    max-width: 650px;
+    margin-top: 1.5rem;
+}
+
+.muted {
+    color: var(--falcons-silver);
+    font-size: 0.9rem;
+}
+
+/* Layout */
+
+.hero {
+    margin-bottom: 4rem;
+}
+
+.content {
+    margin-bottom: 4rem;
+}
+
+.block {
     margin-top: 2rem;
 }
 
-h3 {
-    font-size: 1rem;
-    color: var(--falcons-silver);
+ul {
+    margin-top: 1rem;
+    padding-left: 1.2rem;
 }
 
-strong {
-    color: #ffffff;
-}
-
-hr {
-    border: 0;
-    border-top: 1px solid #2a2a2a;
-    margin: 3rem 0;
-}
-
-section#cv ul li::marker {
+li::marker {
     color: var(--falcons-red);
 }
+
+.now-list li {
+    margin-bottom: 0.6rem;
+}
+
+/* Footer */
 
 footer {
     text-align: center;
     font-size: 0.8rem;
-    margin-top: 5rem;
     color: var(--falcons-silver);
+    margin-top: 6rem;
     opacity: 0.7;
 }
