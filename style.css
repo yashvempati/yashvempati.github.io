@@ -114,3 +114,47 @@ footer {
     margin-top: 6rem;
     opacity: 0.7;
 }
+/* Portfolio Cards */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.card {
+    display: block;
+    padding: 1.5rem;
+    border: 1px solid #2a2a2a;
+    background: rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+    color: var(--text-main);
+    transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 0.6rem;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.card p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--falcons-silver);
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    border-color: var(--falcons-red);
+}
+
+.tag {
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    color: var(--falcons-red);
+}
