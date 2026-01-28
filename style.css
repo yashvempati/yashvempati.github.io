@@ -210,3 +210,29 @@ footer {
         font-size: 1.5rem;
     }
 }
+/* ---------------- Contact ---------------- */
+
+.contact-list {
+    margin-top: 2rem;
+}
+
+.contact-list p {
+    margin-bottom: 1.8rem;
+}
+
+.contact-label {
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    color: var(--falcons-silver);
+    text-transform: uppercase;
+}
+
+.contact-list a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.contact-list a:hover {
+    text-decoration: underline;
+}
+
