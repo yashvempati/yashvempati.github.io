@@ -5,6 +5,8 @@
     --text-main: #d1d1d1;
 }
 
+/* ---------------- Base ---------------- */
+
 * {
     box-sizing: border-box;
 }
@@ -41,6 +43,7 @@ nav ul {
     display: flex;
     gap: 1.5rem;
     padding: 0;
+    margin: 0;
 }
 
 nav a {
@@ -61,7 +64,6 @@ nav a.active {
     margin-bottom: 4rem;
 }
 
-/* Centered intro block */
 .intro {
     display: flex;
     flex-direction: column;
@@ -76,23 +78,23 @@ nav a.active {
     color: #ffffff;
 }
 
-/* Small, restrained headshot */
+/* Profile picture */
 .profile-pic {
-    width: 72px;
-    height: 72px;
+    width: 144px;
+    height: 144px;
     object-fit: cover;
-    border-radius: 4px;
+    border-radius: 6px;
     border: 1px solid #2a2a2a;
-    margin: 1rem 0 0.8rem;
-    filter: grayscale(40%) contrast(0.95);
+    margin: 1.2rem 0 1rem;
 }
 
-/* Falcons-red divider */
+/* Full-width Falcons-red divider */
 .accent-line {
-    width: 36px;
+    width: 100%;
+    max-width: 900px;
     height: 2px;
     background-color: var(--falcons-red);
-    margin-bottom: 1.6rem;
+    margin: 0 auto 2rem;
 }
 
 /* ---------------- Typography ---------------- */
@@ -108,7 +110,7 @@ h1, h2, h3 {
     margin: 0 auto;
 }
 
-/* After intro, text returns to normal left alignment */
+/* Reset alignment after intro */
 .content .lead {
     text-align: left;
     margin-left: 0;
@@ -167,8 +169,7 @@ li::marker {
 }
 
 .card h3 {
-    margin-top: 0;
-    margin-bottom: 0.6rem;
+    margin: 0 0 0.6rem;
 }
 
 .card p {
@@ -184,32 +185,6 @@ li::marker {
     color: var(--falcons-red);
 }
 
-/* ---------------- Footer ---------------- */
-
-footer {
-    text-align: center;
-    font-size: 0.8rem;
-    color: var(--falcons-silver);
-    margin-top: 6rem;
-    opacity: 0.7;
-}
-
-/* ---------------- Mobile ---------------- */
-
-@media (max-width: 600px) {
-    body {
-        padding: 1.5rem;
-    }
-
-    .profile-pic {
-        width: 128px;
-        height: 128px;
-    }
-
-    .intro h1 {
-        font-size: 1.5rem;
-    }
-}
 /* ---------------- Contact ---------------- */
 
 .contact-list {
@@ -236,3 +211,29 @@ footer {
     text-decoration: underline;
 }
 
+/* ---------------- Footer ---------------- */
+
+footer {
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--falcons-silver);
+    margin-top: 6rem;
+    opacity: 0.7;
+}
+
+/* ---------------- Mobile ---------------- */
+
+@media (max-width: 600px) {
+    body {
+        padding: 1.5rem;
+    }
+
+    .profile-pic {
+        width: 112px;
+        height: 112px;
+    }
+
+    .intro h1 {
+        font-size: 1.5rem;
+    }
+}
